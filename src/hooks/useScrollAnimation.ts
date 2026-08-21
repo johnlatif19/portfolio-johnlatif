@@ -65,62 +65,52 @@ export const useScrollAnimation = <T extends HTMLElement = HTMLDivElement>({
   return { ref, isVisible, progress };
 };
 
-// 🚀 تأثير الصاروخ - لما تيجي من الـ Navbar
+// ✅ التصديرات المهمة دي كانت ناقصة
+export const scrollVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
+export const scrollVariantsStagger = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+};
+
+export const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
+
+// تأثيرات إضافية
 export const rocketVariants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.3,
-    rotate: 45,
-    y: 200,
-    x: 100,
-  },
+  hidden: { opacity: 0, scale: 0.3, rotate: 45, y: 200, x: 100 },
   visible: {
     opacity: 1,
     scale: 1,
     rotate: 0,
     y: 0,
     x: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
   },
 };
 
-// 💥 تأثير الانفجار - لما تسكرول عادي
 export const explosionVariants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.8,
-    rotate: -10,
-    y: 50,
-  },
+  hidden: { opacity: 0, scale: 0.8, rotate: -10, y: 50 },
   visible: {
     opacity: 1,
     scale: 1,
     rotate: 0,
     y: 0,
-    transition: {
-      duration: 0.9,
-      ease: [0.34, 1.56, 0.64, 1],
-    },
+    transition: { duration: 0.9, ease: [0.34, 1.56, 0.64, 1] },
   },
 };
 
-// 💨 تأثير الدخان - لما ترجع لفوق
 export const smokeVariants = {
-  hidden: {
-    opacity: 1,
-    scale: 1,
-    filter: 'blur(0px)',
-  },
+  hidden: { opacity: 1, scale: 1, filter: 'blur(0px)' },
   visible: {
     opacity: 0,
     scale: 1.5,
     filter: 'blur(10px)',
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
-    },
+    transition: { duration: 0.8, ease: 'easeOut' },
   },
 };
