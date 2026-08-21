@@ -1,7 +1,6 @@
 import { Project } from '../types/index';
 
 export const projectsData: Project[] = [
-  // المشاريع الجديدة - مع الصور
   {
     id: 'shulamith-gallery',
     title: 'Shulamith Gallery',
@@ -32,7 +31,6 @@ export const projectsData: Project[] = [
     githubUrl: '#',
     featured: true,
   },
-  // المشاريع القديمة
   {
     id: 'project-1',
     title: 'E-Commerce Platform',
